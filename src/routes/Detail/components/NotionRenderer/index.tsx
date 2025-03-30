@@ -115,10 +115,7 @@ const StyledWrapper = styled.div`
     width: 100%;
   }
   .notion-inline-code {
-  background-color: "#ddebf1"
-  padding: 2px 4px;
-  border-radius: 4px;
-  font-family: "Courier New", monospace;
-  font-size: 0.85rem;
-}
+  background-color: ${({ theme })  =>
+      theme.scheme === "dark" ? "#2d2d2d" : "#ddebf1;" };
+  }
 `
