@@ -109,11 +109,16 @@ const StyledWrapper = styled.div`
   }
   .notion{
     font-family: ${pretendard.style.fontFamily};
-    color: ${({ theme })  =>
-      theme.scheme === "dark" ? "rgb(209 213 219)" : "rgb(107 114 128);" };
     overflow-wrap: break-word;
   }
   .notion-list {
     width: 100%;
   }
+  .notion-inline-code {
+  background-color: "#ddebf1"
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: "Courier New", monospace;
+  font-size: 0.85rem;
+}
 `
