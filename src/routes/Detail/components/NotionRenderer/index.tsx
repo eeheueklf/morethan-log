@@ -114,10 +114,13 @@ const StyledWrapper = styled.div`
   .notion-list {
     width: 100%;
   }
-  .notion-inline-code {
-  background-color: ${({ theme })  =>
-      theme.scheme === "dark" ? "#2d2d2d" : "#ddebf1;" };
-  color: ${({ theme })  =>
-      theme.scheme === "dark" ? "#000000" : "#000000;" };
-  }
+  
 `
+// .notion-inline-code {
+//   background-color: ${({ theme })  =>
+//       theme.scheme === "dark" ? "#2d2d2d" : "#ddebf1;" };
+//   color: 2px 4px;
+//   border-radius: 4px;
+//   font-family: "Courier New", monospace;
+//   font-size: 0.85rem;
+//   }
