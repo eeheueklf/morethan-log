@@ -1,4 +1,5 @@
 import { useState } from "react"
+
 import SearchInput from "./SearchInput"
 import { FeedHeader } from "./FeedHeader"
 import Footer from "./Footer"
@@ -47,7 +48,6 @@ const Feed: React.FC<Props> = () => {
         }}
       >
         <ProfileCard />
-        {/* <ServiceCard /> */}
         <ContactCard />
         <div className="footer">
           <Footer />

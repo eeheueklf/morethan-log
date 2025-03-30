@@ -1,8 +1,8 @@
-import { CONFIG } from "site.config"
-import { Emoji } from "src/components/Emoji"
+import styled from "@emotion/styled"
 import Image from "next/image"
 import React from "react"
-import styled from "@emotion/styled"
+import { CONFIG } from "site.config"
+import { Emoji } from "src/components/Emoji"
 
 type Props = {}
 
@@ -38,7 +38,7 @@ const StyledWrapper = styled.div`
     border-radius: 1rem;
     width: 100%;
     background-color: ${({ theme }) =>
-      theme.scheme === "light" ? "white" : "rgb(63 63 70)"};
+      theme.scheme === "light" ? "white" : theme.colors.gray4};
     @media (min-width: 768px) {
       padding: 1rem;
     }

@@ -12,10 +12,6 @@ class MyDocument extends Document {
             sizes="192x192"
             href="/apple-touch-icon.png"
           ></link>
-          <link rel="manifest" href="/manifest.json" />
-          <meta name="msapplication-TileColor" content="#ffffff" />
-          <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-          <meta name="theme-color" content="#ffffff" />
           <link
             rel="alternate"
             type="application/rss+xml"
@@ -31,7 +27,7 @@ class MyDocument extends Document {
               />
             </>
           )}
-          {/* naver search console */}
+          {/* naver search advisor */}
           {CONFIG.naverSearchAdvisor.enable === true && (
             <>
               <meta

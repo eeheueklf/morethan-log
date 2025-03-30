@@ -13,13 +13,18 @@ type Props = {
 const Footer: React.FC<Props> = ({ className }) => {
   return (
     <StyledWrapper className={className}>
-      <a
-        href={`https://github.com/${CONFIG.profile.github}`}
-        target="_blank"
-        rel="noreferrer"
-      >
-        © {CONFIG.profile.name} {from === y || !from ? y : `${from} - ${y}`}
-      </a>
+      <FooterContainer>
+        <a
+          href={`https://github.com/${CONFIG.profile.github}`}
+          target="_blank"
+          rel="noreferrer"
+        >
+          © {CONFIG.profile.name} {from === y || !from ? y : `${from} - ${y}`}
+        </a>
+        <HitCounter href="https://hits.seeyoufarm.com">
+          <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fcloudys.azurewebsites.net&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false" />
+        </HitCounter>
+      </FooterContainer>
     </StyledWrapper>
   )
 }
@@ -34,3 +39,15 @@ const StyledWrapper = styled.div`
     color: ${({ theme }) => theme.colors.gray10};
   }
 `
+const FooterContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 16px;
+`;
+
+const HitCounter = styled.a`
+  margin-top: 8px;
+`;
