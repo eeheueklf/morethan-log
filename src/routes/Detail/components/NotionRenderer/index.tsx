@@ -112,7 +112,6 @@ const StyledWrapper = styled.div`
     color: ${({ theme })  =>
       theme.scheme === "dark" ? "rgb(209 213 219)" : "rgb(107 114 128);" };
     overflow-wrap: break-word;
-    font-size: 0.9rem;
   }
   .notion-list {
     width: 100%;
