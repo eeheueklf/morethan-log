@@ -117,5 +117,7 @@ const StyledWrapper = styled.div`
   .notion-inline-code {
   background-color: ${({ theme })  =>
       theme.scheme === "dark" ? "#2d2d2d" : "#ddebf1;" };
+  color: ${({ theme })  =>
+      theme.scheme === "dark" ? "#000000" : "#000000;" };
   }
 `
