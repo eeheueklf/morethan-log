@@ -23,23 +23,7 @@ const _NotionRenderer = dynamic(
 )
 
 const Code = dynamic(() =>
-  import("react-notion-x/build/third-party/code").then(async (m) => {
-    await Promise.all([
-      import("prismjs/components/prism-java.js"),
-      import("prismjs/components/prism-sql.js"),
-      import("prismjs/components/prism-python.js"),
-      import("prismjs/components/prism-bash.js"),
-      import("prismjs/components/prism-bicep.js"),
-      import("prismjs/components/prism-docker.js"),
-      import("prismjs/components/prism-kusto.js"),
-      import("prismjs/components/prism-json.js"),
-      import("prismjs/components/prism-log.js"),
-      import("prismjs/components/prism-rego.js"),
-      import("prismjs/components/prism-yaml.js"),
-      import("prismjs/components/prism-markdown.js")
-    ])
-    return m.Code as any
-  })
+  import("react-notion-x/build/third-party/code").then(async (m) => m.Code)
 )
 
 const Collection = dynamic(() =>
@@ -103,18 +87,13 @@ const StyledWrapper = styled.div`
   .notion-page {
     padding: 0;
   }
-  .notion-code{
-    background-color: ${({ theme })  =>
-      theme.scheme === "dark" ? "#2d2d2d" : "#f7f6f3;" };
-  }
-  .notion{
-    font-family: ${pretendard.style.fontFamily};
-    color: ${({ theme })  =>
-      theme.scheme === "dark" ? "rgb(209 213 219)" : "rgb(107 114 128);" };
-    overflow-wrap: break-word;
-    font-size: 0.9rem;
-  }
   .notion-list {
     width: 100%;
   }
+  .notion {
+  font-family: ${pretendard.style.fontFamily};
+  color: ${({ theme }) =>
+    theme === "dark" ? "rgb(209 213 219)" : "rgb(107 114 128);"};
+  overflow-wrap: break-word;
+}
 `
