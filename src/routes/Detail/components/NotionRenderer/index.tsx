@@ -8,7 +8,7 @@ import useScheme from "src/hooks/useScheme"
 import "react-notion-x/src/styles.css"
 
 // used for code syntax highlighting (optional)
-import "prismjs/themes/prism-tomorrow.css"
+import "prismjs/themes/prism.css"
 
 // used for rendering equations (optional)
 
@@ -28,15 +28,16 @@ const Code = dynamic(() =>
       import("prismjs/components/prism-java.js"),
       import("prismjs/components/prism-sql.js"),
       import("prismjs/components/prism-python.js"),
-      import("prismjs/components/prism-bash.js"),
-      import("prismjs/components/prism-bicep.js"),
-      import("prismjs/components/prism-docker.js"),
-      import("prismjs/components/prism-kusto.js"),
+      import("prismjs/components/prism-javascript.js"),
       import("prismjs/components/prism-json.js"),
-      import("prismjs/components/prism-log.js"),
-      import("prismjs/components/prism-rego.js"),
-      import("prismjs/components/prism-yaml.js"),
-      import("prismjs/components/prism-markdown.js")
+      // import("prismjs/components/prism-bash.js"),
+      // import("prismjs/components/prism-bicep.js"),
+      // import("prismjs/components/prism-docker.js"),
+      // import("prismjs/components/prism-kusto.js"),
+      // import("prismjs/components/prism-log.js"),
+      // import("prismjs/components/prism-rego.js"),
+      // import("prismjs/components/prism-yaml.js"),
+      // import("prismjs/components/prism-markdown.js")
     ])
     return m.Code as any
   })
