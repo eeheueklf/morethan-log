@@ -12,6 +12,16 @@ class MyDocument extends Document {
             sizes="192x192"
             href="/apple-touch-icon.png"
           ></link>
+          <link rel="manifest" href="/manifest.json" />
+           <meta
+             httpEquiv="cache-control"
+             content="no-cache, no-store, must-revalidate"
+           />
+           <meta httpEquiv="pragma" content="no-cache" />
+           <meta httpEquiv="expires" content="0" />
+           <meta name="msapplication-TileColor" content="#ffffff" />
+           <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+           <meta name="theme-color" content="#ffffff" />
           <link
             rel="alternate"
             type="application/rss+xml"
