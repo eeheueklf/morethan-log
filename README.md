@@ -1,6 +1,7 @@
 # hamrang-log
 
-<img width="1715" alt="image" src="https://github.com/user-attachments/assets/621cf00f-9d57-4bec-a9e0-8cc729e3d80">
+<img width="1715" alt="image" src="https://github.com/user-attachments/assets/440bfb66-7291-4751-bd25-9fb011aa226c">
+
 
 ## License
 
