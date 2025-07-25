@@ -9,7 +9,7 @@ import styled from "@emotion/styled"
 
 type Props = {
   data: TPost
-  showMedia: boolean //카테고리 및 썸네일을 표시할지 여부를 결정
+  showMedia: boolean 
 }
 
 const PostCard: React.FC<Props> = ({ data, showMedia }) => {
