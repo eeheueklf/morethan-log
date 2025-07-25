@@ -1,8 +1,7 @@
 const { CONFIG } = require("./site.config")
 
 module.exports = {
-  // siteUrl: CONFIG.link,
-   siteUrl: "https://hamrang.vercel.app/",
+  siteUrl: CONFIG.link,
   generateRobotsTxt: true,
   sitemapSize: 7000,
   generateIndexSitemap: false,
