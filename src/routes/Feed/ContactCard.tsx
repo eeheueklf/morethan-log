@@ -13,9 +13,14 @@ const ContactCard: React.FC = () => {
   return (
     <>
       <StyledWrapper>
-      <StyledTitle>
+      {/* <StyledTitle>
         <Emoji>💬</Emoji> Contact
-      </StyledTitle>
+      </StyledTitle> */}
+      <div className="content">
+        <div className="top">
+          <Image src={CONFIG.profile.image} fill alt="" />
+        </div>
+      </div>
         {CONFIG.profile.github && (
           <a
             href={`https://github.com/${CONFIG.profile.github}`}
@@ -69,6 +74,31 @@ const StyledTitle = styled.div`
   margin-bottom: 0.75rem;
 `
 const StyledWrapper = styled.div`
+  > .content {
+    margin-bottom: 2.25rem;
+    border-radius: 1rem;
+    border: 1px solid #DFDFDE;
+    width: 100%;
+    background-color: ${({ theme }) =>
+      theme.scheme === "light" ? "white" : theme.colors.gray4};
+    @media (min-width: 768px) {
+      padding: 1rem;
+    }
+    @media (min-width: 1024px) {
+      padding: 1rem;
+    }
+    .top {
+      position: relative;
+      width: 100%;
+      &:after {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+      }
+    }
+  }
+
+
   display: flex;
   padding: 0.25rem;
   flex-direction: column;

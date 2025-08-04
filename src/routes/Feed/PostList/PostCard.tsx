@@ -18,11 +18,11 @@ const PostCard: React.FC<Props> = ({ data, showMedia }) => {
   return (
     <StyledWrapper href={`/${data.slug}`}>
       <article>
-        {showMedia && category && (
+        {/* {showMedia && category && (
           <div className="category">
             <Category>{category}</Category>
           </div>
-        )}
+        )} */}
         {showMedia && data.thumbnail && (
           <div className="thumbnail">
             <Image
@@ -49,12 +49,14 @@ const PostCard: React.FC<Props> = ({ data, showMedia }) => {
               )}
             </div>
           </div>
-          <div className="summary">
-            <p>{data.summary}</p>
-          </div>
+          {showMedia && (
+            <div className="summary">
+              <p>{data.summary}</p>
+            </div>
+          )}
           <div className="tags">
             {data.tags &&
-              data.tags.map((tag: string, idx: number) => (
+              (showMedia ? data.tags : data.tags.slice(0, 2)).map((tag: string, idx: number) => (
                 <Tag key={idx} postId={data.id} tagIndex={idx}>
                   {tag}
                 </Tag>
@@ -75,8 +77,7 @@ const StyledWrapper = styled(Link)`
     margin-bottom: 1.5rem;
     border-radius: 0.7rem;
     border: 1px solid #DFDFDE;
-    background-color: ${({ theme }) =>
-      theme.scheme === "light" ? "white" : "rgb(63 63 70)"};
+    background-color: "white";
     transition-property: box-shadow;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 300ms;
