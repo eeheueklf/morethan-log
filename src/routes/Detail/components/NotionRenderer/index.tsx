@@ -117,14 +117,12 @@ const StyledWrapper = styled.div`
   }
   .notion,
   .notion-text,
-  .notion-quote,
   .notion-h-title {
     line-height: 1.75;
     padding: 0;
     margin-top: 0.25rem;
     margin-bottom: 0.25rem;
-  }
-
+  },
   .notion-toggle {
     width: 100%;
   }
@@ -194,6 +192,13 @@ const StyledWrapper = styled.div`
 
   .notion-quote {
     padding: 0.2em 0.9em;
+    line-height: 1.75;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .notion-callout {
+    border: 1px solid rgb(209 213 219);
   }
 
   .notion-collection {
@@ -261,8 +266,14 @@ const StyledWrapper = styled.div`
     }
   }
 
+  .notion-simple-table  {
+    border: 1px solid #dfdfde;
+    border-collapse: separate;
+    width: 100%;
+  }
+
   .notion-simple-table td {
-    border: 1px solid rgb(209 213 219);
+    border: 1px solid #dfdfde;
   }
 
   @media screen and (max-width: 1800px) {
