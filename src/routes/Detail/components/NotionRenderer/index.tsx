@@ -108,10 +108,10 @@ const StyledWrapper = styled.div`
     background-color: ${({ theme })  =>
       theme.scheme === "dark" ? "#2d2d2d" : "#f7f6f3;" };
   }
-  .notion{
-    font-family: ${pretendard.style.fontFamily};
-    overflow-wrap: break-word;
-  }
+  // .notion{
+  //   font-family: ${pretendard.style.fontFamily};
+  //   overflow-wrap: break-word;
+  // }
   .notion-list {
     width: 100%;
   }
