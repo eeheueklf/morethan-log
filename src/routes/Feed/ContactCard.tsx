@@ -12,10 +12,10 @@ import { Emoji } from "src/components/Emoji"
 const ContactCard: React.FC = () => {
   return (
     <>
+      <StyledWrapper>
       <StyledTitle>
         <Emoji>💬</Emoji> Contact
       </StyledTitle>
-      <StyledWrapper>
         {CONFIG.profile.github && (
           <a
             href={`https://github.com/${CONFIG.profile.github}`}
@@ -73,6 +73,7 @@ const StyledWrapper = styled.div`
   padding: 0.25rem;
   flex-direction: column;
   border-radius: 1rem;
+  border: 1px solid #DFDFDE;
   background-color: ${({ theme }) =>
     theme.scheme === "light" ? "white" : theme.colors.gray4};
   a {
