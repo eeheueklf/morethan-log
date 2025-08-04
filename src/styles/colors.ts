@@ -15,6 +15,7 @@ export type Colors = typeof colors.light & typeof colors.dark
 
 export const colors = {
   light: {
+    white: "#ffffff",
     ...indigo,
     ...gray,
     ...blue,
@@ -22,6 +23,7 @@ export const colors = {
     ...green,
   },
   dark: {
+    white: "#ffffff",
     ...indigoDark,
     ...grayDark,
     ...blueDark,
