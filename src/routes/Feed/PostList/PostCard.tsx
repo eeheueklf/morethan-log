@@ -73,7 +73,8 @@ const StyledWrapper = styled(Link)`
     overflow: hidden;
     position: relative;
     margin-bottom: 1.5rem;
-    border-radius: 1rem;
+    border-radius: 0.7rem;
+    border: 1px solid #DFDFDE;
     background-color: ${({ theme }) =>
       theme.scheme === "light" ? "white" : "rgb(63 63 70)"};
     transition-property: box-shadow;
