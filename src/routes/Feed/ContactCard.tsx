@@ -17,7 +17,7 @@ const ContactCard: React.FC = () => {
       {/* <StyledTitle>
         <Emoji>💬</Emoji> Contact
       </StyledTitle> */}
-      <div className="content">
+      {/* <div className="content">
         <div className="top">
           <Image src={CONFIG.profile.image} fill alt="" />
         </div>
@@ -26,7 +26,7 @@ const ContactCard: React.FC = () => {
           <div className="role">{CONFIG.profile.role}</div>
           <div className="text-sm mb-2">{CONFIG.profile.bio}</div>
         </div>
-      </div>
+      </div> */}
         {CONFIG.profile.github && (
           <a
             href={`https://github.com/${CONFIG.profile.github}`}
@@ -34,7 +34,7 @@ const ContactCard: React.FC = () => {
             target="_blank"
           >
             <AiOutlineGithub className="icon" />
-            <div className="name">github</div>
+            <div className="name">𝙶𝚒𝚝𝚑𝚞𝚋</div>
           </a>
         )}
         {CONFIG.profile.instagram && (
@@ -44,7 +44,7 @@ const ContactCard: React.FC = () => {
             target="_blank"
           >
             <AiOutlineInstagram className="icon" />
-            <div className="name">instagram</div>
+            <div className="name">𝙸𝚗𝚜𝚝𝚊𝚐𝚛𝚊𝚖</div>
           </a>
         )}
         {CONFIG.profile.email && (
@@ -55,7 +55,7 @@ const ContactCard: React.FC = () => {
             css={{ overflow: "hidden" }}
           >
             <AiOutlineMail className="icon" />
-            <div className="name">email</div>
+            <div className="name">𝚎𝚖𝚊𝚒𝚕</div>
           </a>
         )}
         {CONFIG.profile.linkedin && (
@@ -81,12 +81,12 @@ const StyledTitle = styled.div`
 `
 const StyledWrapper = styled.div`
   > .content {
-    margin-bottom: 2.25rem;
     border-radius: 1rem;
     width: 100%;
     .top {
       position: relative;
       width: 100%;
+      height: 240px;
       &:after {
         content: "";
         display: block;
@@ -127,8 +127,8 @@ const StyledWrapper = styled.div`
     theme.scheme === "light" ? "white" : theme.colors.gray4};
   a {
     display: flex;
-    padding: 0.75rem;
-    gap: 0.75rem;
+    padding: 0.3rem;
+    gap: 0.3rem;
     align-items: center;
     border-radius: 1rem;
     color: ${({ theme }) => theme.colors.gray11};

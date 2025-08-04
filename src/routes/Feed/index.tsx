@@ -26,8 +26,8 @@ const Feed: React.FC<Props> = () => {
           height: `calc(100vh - ${HEADER_HEIGHT}px)`,
         }}
       >
-        <PinnedPosts q={q} />
         <TagList />
+        <ContactCard />
       </div>
       <div className="mid">
         <MobileProfileCard />
@@ -47,8 +47,8 @@ const Feed: React.FC<Props> = () => {
           height: `calc(100vh - ${HEADER_HEIGHT}px)`,
         }}
       >
+        <PinnedPosts q={q} />
         <ProfileCard />
-        <ContactCard />
         <div className="footer">
           <Footer />
         </div>
