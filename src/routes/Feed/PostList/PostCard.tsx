@@ -13,7 +13,7 @@ type Props = {
 }
 
 const PostCard: React.FC<Props> = ({ data, showMedia }) => {
-  const category = (data.category && data.category?.[0]) || undefined
+  // const category = (data.category && data.category?.[0]) || undefined
 
   return (
     <StyledWrapper href={`/${data.slug}`}>
@@ -35,7 +35,7 @@ const PostCard: React.FC<Props> = ({ data, showMedia }) => {
         )}
         <div
           data-thumb={!!data.thumbnail}
-          data-category={!!category}
+          // data-category={!!category}
           className="content"
         >
           <header className="top">
