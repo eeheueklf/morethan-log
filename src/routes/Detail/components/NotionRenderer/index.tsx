@@ -153,17 +153,15 @@ const StyledWrapper = styled.div`
 
   .notion-bookmark .notion-bookmark-title,
   .notion-bookmark .notion-bookmark-link div {
-    color: ${({ theme }) =>
-      theme === "dark" ? "rgb(229 231 235)" : "rgb(17 24 39);"};
+    color: "rgb(17 24 39);";
   }
 
   .notion-bookmark .notion-bookmark-description {
-    color: ${({ theme }) =>
-      theme === "dark" ? "rgb(209 213 219)" : "rgb(75 85 99);"};
+    color: "rgb(75 85 99);";
   }
 
   .notion-code > code {
-    color: ${({ theme }) => (theme === "dark" ? "#ccc)" : "rgb(17 24 39);")};
+    color: "rgb(17 24 39);};
   }
 
   pre[class*="language-"] {
@@ -179,8 +177,7 @@ const StyledWrapper = styled.div`
   }
 
   .notion-asset-caption {
-    color: ${({ theme }) =>
-      theme === "dark" ? "rgb(161 161 170)" : "rgb(113 113 122);"};
+    color: "rgb(113 113 122);";
   }
 
   .notion-full-width {
