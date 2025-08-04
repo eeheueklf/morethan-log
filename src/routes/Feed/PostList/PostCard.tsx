@@ -9,13 +9,11 @@ import styled from "@emotion/styled"
 
 type Props = {
   data: TPost
-  showMedia: boolean 
+  showMedia: boolean
 }
 
 const PostCard: React.FC<Props> = ({ data, showMedia }) => {
   const category = (data.category && data.category?.[0]) || undefined
-  const author = data.author && data.author[0];
-
 
   return (
     <StyledWrapper href={`/${data.slug}`}>
@@ -51,25 +49,15 @@ const PostCard: React.FC<Props> = ({ data, showMedia }) => {
               )}
             </div>
           </div>
-          {author && (
-            <div className="author-info">
-              <Image
-                src={author.profile_photo as string} // here we make sure the src is string
-                width={20}
-                height={20}
-                alt={author.name}
-                className="author-photo"
-              />
-              <span className="author-name">{author.name}</span>
-            </div>
-          )}
           <div className="summary">
             <p>{data.summary}</p>
           </div>
           <div className="tags">
             {data.tags &&
               data.tags.map((tag: string, idx: number) => (
-                <Tag key={idx}>{tag}</Tag>
+                <Tag key={idx} postId={data.id} tagIndex={idx}>
+                  {tag}
+                </Tag>
               ))}
           </div>
         </div>
@@ -87,7 +75,7 @@ const StyledWrapper = styled(Link)`
     margin-bottom: 1.5rem;
     border-radius: 1rem;
     background-color: ${({ theme }) =>
-    theme.scheme === "light" ? "white" : "rgb(40, 40, 40)"};
+      theme.scheme === "light" ? "white" : "rgb(63 63 70)"};
     transition-property: box-shadow;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 300ms;
@@ -151,7 +139,7 @@ const StyledWrapper = styled(Link)`
       }
       > .date {
         display: flex;
-        margin-bottom: 0.5rem;
+        margin-bottom: 1rem;
         gap: 0.5rem;
         align-items: center;
         .content {
@@ -161,20 +149,6 @@ const StyledWrapper = styled(Link)`
           @media (min-width: 768px) {
             margin-left: 0;
           }
-        }
-      }
-      > .author-info {
-        display: flex;
-        align-items: center;
-        margin-bottom: 1rem;
-
-        .author-photo {
-          border-radius: 50%;
-          margin-right: 0.5rem;
-        }
-        .author-name {
-          font-size: 0.875rem;
-          color: ${({ theme }) => theme.colors.gray11};
         }
       }
       > .summary {
@@ -195,4 +169,4 @@ const StyledWrapper = styled(Link)`
       }
     }
   }
-`;
+`
