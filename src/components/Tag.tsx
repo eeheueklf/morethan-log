@@ -4,21 +4,16 @@ import { useRouter } from "next/router"
 import React from "react"
 
 const colorArray = [
-  colors.light.red4,
-  colors.light.green4,
-  colors.light.purple4,
-  colors.light.orange4,
-  colors.light.blue4,
-  colors.light.crimson4,
-  colors.light.teal4,
-  colors.light.pink4,
-  colors.light.indigo4,
-  colors.light.amber4,
-  colors.light.violet4,
-  colors.light.cyan4,
-  colors.light.brown4,
-  colors.light.lime4,
-  // colors.light.gold4,
+  "#F5F5DC", 
+  "#FAF0E6", 
+  "#EEE8D5", 
+  "#F0EAD6", 
+  "#FDF6E3", 
+  "#EADAB8", 
+  "#D8CAB8", 
+  "#CBBFA2", 
+  "#E6D8AD", 
+  "#F3E9D2", 
 ]
 
 type Props = {
