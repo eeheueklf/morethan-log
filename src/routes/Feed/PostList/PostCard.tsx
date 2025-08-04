@@ -9,23 +9,20 @@ import styled from "@emotion/styled"
 
 type Props = {
   data: TPost
-  showMedia: boolean 
 }
 
-const PostCard: React.FC<Props> = ({ data, showMedia }) => {
+const PostCard: React.FC<Props> = ({ data }) => {
   const category = (data.category && data.category?.[0]) || undefined
-  const author = data.author && data.author[0];
-
 
   return (
     <StyledWrapper href={`/${data.slug}`}>
       <article>
-        {showMedia && category && (
+        {category && (
           <div className="category">
             <Category>{category}</Category>
           </div>
         )}
-        {showMedia && data.thumbnail && (
+        {data.thumbnail && (
           <div className="thumbnail">
             <Image
               src={data.thumbnail}
@@ -35,11 +32,7 @@ const PostCard: React.FC<Props> = ({ data, showMedia }) => {
             />
           </div>
         )}
-        <div
-          data-thumb={!!data.thumbnail}
-          data-category={!!category}
-          className="content"
-        >
+        <div data-thumb={!!data.thumbnail} data-category={!!category} className="content">
           <header className="top">
             <h2>{data.title}</h2>
           </header>
@@ -51,25 +44,13 @@ const PostCard: React.FC<Props> = ({ data, showMedia }) => {
               )}
             </div>
           </div>
-          {author && (
-            <div className="author-info">
-              <Image
-                src={author.profile_photo as string} // here we make sure the src is string
-                width={20}
-                height={20}
-                alt={author.name}
-                className="author-photo"
-              />
-              <span className="author-name">{author.name}</span>
-            </div>
-          )}
           <div className="summary">
             <p>{data.summary}</p>
           </div>
           <div className="tags">
             {data.tags &&
               data.tags.map((tag: string, idx: number) => (
-                <Tag tag_id={idx}>{tag}</Tag>
+                <Tag key={idx}>{tag}</Tag>
               ))}
           </div>
         </div>
@@ -87,7 +68,7 @@ const StyledWrapper = styled(Link)`
     margin-bottom: 1.5rem;
     border-radius: 1rem;
     background-color: ${({ theme }) =>
-    theme.scheme === "light" ? "white" : "rgb(40, 40, 40)"};
+      theme.scheme === "light" ? "white" : theme.colors.gray4};
     transition-property: box-shadow;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 300ms;
@@ -151,7 +132,7 @@ const StyledWrapper = styled(Link)`
       }
       > .date {
         display: flex;
-        margin-bottom: 0.5rem;
+        margin-bottom: 1rem;
         gap: 0.5rem;
         align-items: center;
         .content {
@@ -161,20 +142,6 @@ const StyledWrapper = styled(Link)`
           @media (min-width: 768px) {
             margin-left: 0;
           }
-        }
-      }
-      > .author-info {
-        display: flex;
-        align-items: center;
-        margin-bottom: 1rem;
-
-        .author-photo {
-          border-radius: 50%;
-          margin-right: 0.5rem;
-        }
-        .author-name {
-          font-size: 0.875rem;
-          color: ${({ theme }) => theme.colors.gray11};
         }
       }
       > .summary {
@@ -195,4 +162,4 @@ const StyledWrapper = styled(Link)`
       }
     }
   }
-`;
+`

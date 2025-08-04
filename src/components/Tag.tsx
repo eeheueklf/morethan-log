@@ -1,52 +1,86 @@
+import { colors } from "../styles/colors"
 import styled from "@emotion/styled"
 import { useRouter } from "next/router"
 import React from "react"
 
+const colorArray = [
+  "#F5F5DC", 
+  "#FAF0E6", 
+  "#EEE8D5", 
+  "#F0EAD6", 
+  "#FDF6E3", 
+  "#EADAB8", 
+  "#D8CAB8", 
+  "#CBBFA2", 
+  "#E6D8AD", 
+  "#F3E9D2", 
+]
+
 type Props = {
   children: string
-  tag_id: number
+  postId?: string // 글 ID
+  tagIndex?: number // 태그 순서
 }
 
-const Tag: React.FC<Props> = ({ children, tag_id }) => {
+const hashStringToColor = (str: string, colorsArray: string[]) => {
+  let hash = 5381
+  for (let i = 0; i < str.length; i++) {
+    hash = hash * 33 + str.charCodeAt(i)
+  }
+  const index = Math.abs(hash) % colorsArray.length
+
+  return colorsArray[index]
+}
+
+// 글 단위로 태그 색상 관리
+const getTagColorForPost = (
+  tagName: string,
+  postId: string,
+  tagIndex: number,
+  colorsArray: string[]
+) => {
+  // 1. 해시 기반으로 기본 색상 선택
+  const baseColorIndex =
+    Math.abs(
+      tagName
+        .split("")
+        .reduce((hash, char) => hash * 33 + char.charCodeAt(0), 5381)
+    ) % colorsArray.length
+
+  // 2. 같은 글 내에서 겹치지 않도록 오프셋 적용
+  const adjustedIndex = (baseColorIndex + tagIndex) % colorsArray.length
+
+  return colorsArray[adjustedIndex]
+}
+
+const Tag: React.FC<Props> = ({ children, postId = "", tagIndex = 0 }) => {
   const router = useRouter()
 
   const handleClick = (value: string) => {
     router.push(`/?tag=${value}`)
   }
-  let arrayOfColors = [
-    "bg-red-200",
-    "bg-yellow-200",
-    "bg-green-200",
-    "bg-blue-200",
-    "bg-indigo-200",
-    "bg-purple-200",
-    "bg-pink-200",
-  ]
 
-  return (
-    <div
-      onClick={() => handleClick(children)}
-      className={`text-xs text-gray-800 font-normal rounded-full ${
-        arrayOfColors[tag_id % arrayOfColors.length]
-      } px-2 py-1 cursor-pointer`}
-    >
-      {children}
-    </div>
-  )
+  const backgroundColor = postId
+    ? getTagColorForPost(children, postId, tagIndex, colorArray)
+    : hashStringToColor(children, colorArray)
+
+  const StyledTag = styled.div`
+    background-color: ${backgroundColor};
+    color: ${colors.light.gray10};
+    padding: 0.25rem 0.5rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  `
+
+  return <StyledTag onClick={() => handleClick(children)}>{children}</StyledTag>
 }
 
 export default Tag
-
-// const StyledWrapper = styled.div`
-//   padding-top: 0.25rem;
-//   padding-bottom: 0.25rem;
-//   padding-left: 0.5rem;
-//   padding-right: 0.5rem;
-//   border-radius: 50px;
-//   font-size: 0.75rem;
-//   line-height: 1rem;
-//   font-weight: 400;
-//   color: ${({ theme }) => theme.colors.gray10};
-//   background-color: ${({ theme }) => theme.colors.gray5};
-//   cursor: pointer;
-// `
