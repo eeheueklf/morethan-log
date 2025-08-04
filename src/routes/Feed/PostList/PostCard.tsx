@@ -69,7 +69,7 @@ const PostCard: React.FC<Props> = ({ data, showMedia }) => {
           <div className="tags">
             {data.tags &&
               data.tags.map((tag: string, idx: number) => (
-                <Tag key={idx}>{tag}</Tag>
+                <Tag tag_id={idx}>{tag}</Tag>
               ))}
           </div>
         </div>
