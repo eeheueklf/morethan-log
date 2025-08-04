@@ -29,7 +29,6 @@ const StyledWrapper = styled.div`
     margin-bottom: 0.75rem;
   }
   > .content {
-    margin-bottom: 2.25rem;
     border-radius: 1rem;
     border: 1px solid #DFDFDE;
     width: 100%;

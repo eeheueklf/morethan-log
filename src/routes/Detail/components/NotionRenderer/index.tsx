@@ -110,7 +110,6 @@ const StyledWrapper = styled.div`
   .notion{
     font-family: ${pretendard.style.fontFamily};
     overflow-wrap: break-word;
-    font-size: 14px;
   }
   .notion-list {
     width: 100%;

@@ -28,7 +28,7 @@ const StyledWrapper = styled.div`
   z-index: ${zIndexes.header};
   position: sticky;
   top: 0;
-  background-color: ${({ theme }) => theme.colors.gray2};
+  background-color: white;
   // 헤더 배경색 설정
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 
