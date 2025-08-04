@@ -30,6 +30,6 @@ const StyledWrapper = styled.div`
   /** Reference: https://github.com/chriskempson/tomorrow-theme **/
   code[class*="language-mermaid"],
   pre[class*="language-mermaid"] {
-    background-color: ${({ theme }) => theme.colors.white};
+    background-color: ${({ theme }) => theme.colors.gray5};
   }
 `
