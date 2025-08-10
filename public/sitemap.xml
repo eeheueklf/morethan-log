@@ -1,6 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
 <url>
+  <loc>https://hamrang.vercel.app/</loc>
+  <lastmod>2025-08-10T08:32:57+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://hamrang.vercel.app/about</loc>
+  <lastmod>2025-08-10T08:32:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hamrang.vercel.app/resume_en</loc>
+  <lastmod>2025-08-10T08:32:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hamrang.vercel.app/fe-internet-10</loc>
+  <lastmod>2025-08-10T08:32:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hamrang.vercel.app/fe-internet-9</loc>
+  <lastmod>2025-08-10T08:32:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hamrang.vercel.app/fe-internet-8</loc>
+  <lastmod>2025-08-10T08:32:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hamrang.vercel.app/fe-internet-7</loc>
+  <lastmod>2025-08-10T08:32:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hamrang.vercel.app/codingtest-1</loc>
+  <lastmod>2025-08-10T08:32:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hamrang.vercel.app/blog-custom-2</loc>
+  <lastmod>2025-08-10T08:32:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hamrang.vercel.app/fe-internet-6</loc>
+  <lastmod>2025-08-10T08:32:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hamrang.vercel.app/fe-internet-5</loc>
+  <lastmod>2025-08-10T08:32:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hamrang.vercel.app/fe-internet-4</loc>
+  <lastmod>2025-08-10T08:32:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hamrang.vercel.app/fe-study-1</loc>
+  <lastmod>2025-08-10T08:32:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hamrang.vercel.app/fe-internet-1</loc>
+  <lastmod>2025-08-10T08:32:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hamrang.vercel.app/stockcal-3</loc>
+  <lastmod>2025-08-10T08:32:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hamrang.vercel.app/stockcal-2</loc>
+  <lastmod>2025-08-10T08:32:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hamrang.vercel.app/blog-posting</loc>
+  <lastmod>2025-08-10T08:32:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hamrang.vercel.app/blog-custom</loc>
+  <lastmod>2025-08-10T08:32:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hamrang.vercel.app/blog-morethanlog</loc>
+  <lastmod>2025-08-10T08:32:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
 
 
 </urlset>
