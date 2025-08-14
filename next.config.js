@@ -15,6 +15,9 @@ module.exports = {
       "s3-us-west-2.amazonaws.com",
     ],
   },
+  experimental: {
+    optimizePackageImports: true,
+  },
   productionBrowserSourceMaps: true,
   webpack: (config) => {
     config.performance = {
