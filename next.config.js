@@ -1,13 +1,4 @@
 module.exports = {
-  async redirects() {
-    return [
-      {
-        source: "/robots.txt",
-        destination: "/robots",
-        permanent: true,
-      },
-    ]
-  },
   images: {
     domains: [
       "www.notion.so",
@@ -15,14 +6,9 @@ module.exports = {
       "s3-us-west-2.amazonaws.com",
     ],
   },
+  transpilePackages: ["mermaid"],
+
   experimental: {
-    optimizePackageImports: true,
-  },
-  productionBrowserSourceMaps: true,
-  webpack: (config) => {
-    config.performance = {
-      hints: false,
-    }
-    return config
+    esmExternals: "loose",
   },
 }
